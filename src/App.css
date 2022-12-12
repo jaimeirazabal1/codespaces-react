@@ -11,3 +11,10 @@
   margin-bottom: 1rem;
   
 }
+.incorrecto {
+  text-decoration:line-through;
+  color: red;
+}
+.incorrecto:hover{
+  cursor:pointer;
+}
