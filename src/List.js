@@ -12,7 +12,7 @@ export const List = ({tasks = [], changeStatus, deleteTask }) => {
         </thead>
         <tbody>
           {
-            tasks?.length && tasks.map( task => 
+            tasks?.length ? tasks.map( task => 
               
               <tr>
                 <td>
@@ -25,7 +25,9 @@ export const List = ({tasks = [], changeStatus, deleteTask }) => {
                 </td>
                 <td>{task.done ? "Hecho" : <input type="checkbox" onChange={()=>changeStatus(task.name)}/>}</td>
               </tr>
-            )
+            ) : <tr>
+              <td colSpan={2}>Create a task</td>
+            </tr>
           }
         </tbody>
         </Table>
